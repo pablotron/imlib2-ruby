@@ -1,0 +1,11 @@
+Imlib2-Ruby TODO
+================
+tutorial
+clip_line... where should I put it?
+hash access for color types
+color superclass with either methods for accessing as various types, or
+subclasses for various types?
+updates
+x11
+preserved context in object (esp image) methods
+gdkx support

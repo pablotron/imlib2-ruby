@@ -1,0 +1,27 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>draw_pieces (CheckerBoard)</title>
+<link rel=StyleSheet href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File examples/oo-board.rb, line 43</span>
+  <span class="kw">def</span> draw_pieces()
+    0.upto(@w) { |x|
+      0.upto(2) { |y|
+        <span class="cmt"># draw top piece</span>
+        rect = [x * @bw + @bw / 2, y * @bh + @bh / 2, @bw * 0.4, @bh * 0.4]
+        <span class="cmt"># Imlib2 bug (works w/ draw_ellipse, but not w/ fill_ellipse)</span>
+        @im.fill_ellipse rect, @tc <span class="kw">if</span> (x - (y % 2)) % 2 == 1
+    
+        <span class="cmt"># draw bottom piece</span>
+        rect[1] = h * @bh - rect[1]
+        <span class="cmt"># Imlib2 bug (works w/ draw_ellipse, but not w/ fill_ellipse)</span>
+        @im.fill_ellipse rect, @bc <span class="kw">if</span> (x - (y % 2)) % 2 == 0
+      }
+    }
+  <span class="kw">end</span></pre>
+</body>
+</html>

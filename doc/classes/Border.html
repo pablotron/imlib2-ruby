@@ -1,0 +1,223 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html><head>
+  <title>Class: Border</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel=StyleSheet href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript" language="JavaScript">
+  <!--
+  function popCode(url) {
+    window.open(url, "Code", 
+          "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+  //-->
+  </script>
+</head>
+
+<body bgcolor="white">
+
+<table summary="Information on class" width="100%" border="0" cellspacing="0">
+ <tr class="title-row">
+ <td class="big-title-font">
+   <sup><font color="aqua">Class</font></sup> Border
+ </td>
+ <td align="right">
+   <table summary="layout" cellspacing="0" cellpadding="2">
+     <tr valign="top">
+      <td class="small-title-font">In:</td>
+      <td class="small-title-font">
+        <a href="../files/imlib2_c.html" class="aqua">
+imlib2.c
+         </a>
+<br />
+      </td>
+     </tr>
+     <tr>
+      <td class="small-title-font">Parent:</td>
+      <td class="small-title-font">
+Object
+      </td>
+     </tr>
+   </table>
+  </td>
+  </tr>
+</table>
+  <!-- banner header -->
+
+
+
+
+
+<table summary="Methods" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Methods</td></tr>
+</table>
+<div class="name-list">
+<a href="#M000015">b</a>&nbsp; &nbsp;
+<a href="#M000016">b=</a>&nbsp; &nbsp;
+<a href="#M000017">bottom</a>&nbsp; &nbsp;
+<a href="#M000018">bottom=</a>&nbsp; &nbsp;
+<a href="#M000002">initialize</a>&nbsp; &nbsp;
+<a href="#M000003">l</a>&nbsp; &nbsp;
+<a href="#M000004">l=</a>&nbsp; &nbsp;
+<a href="#M000005">left</a>&nbsp; &nbsp;
+<a href="#M000006">left=</a>&nbsp; &nbsp;
+<a href="#M000001">new</a>&nbsp; &nbsp;
+<a href="#M000007">r</a>&nbsp; &nbsp;
+<a href="#M000008">r=</a>&nbsp; &nbsp;
+<a href="#M000009">right</a>&nbsp; &nbsp;
+<a href="#M000010">right=</a>&nbsp; &nbsp;
+<a href="#M000011">t</a>&nbsp; &nbsp;
+<a href="#M000012">t=</a>&nbsp; &nbsp;
+<a href="#M000013">top</a>&nbsp; &nbsp;
+<a href="#M000014">top=</a>&nbsp; &nbsp;
+</div>
+
+
+
+
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Class methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000001"></a>
+<a href="Border.src/M000001.html" target="Code" class="methodtitle"
+ onClick="popCode('Border.src/M000001.html');return false;">
+<b>new</b>(int argc, VALUE *argv, VALUE klass)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Returns a new Imlib2::Border.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  left, top, right, bottom = 10, 10, 20, 20
+  border = Imlib2::Border.new left, top, right, bottom
+
+  values = [10, 10, 20, 20]
+  border = Imlib2::Border.new values
+</pre>
+<pre>
+  edges = {
+    'left'   =&gt; 10,
+    'right'  =&gt; 20,
+    'top'    =&gt; 10,
+    'bottom' =&gt; 20,
+  }
+  border = Imlib2::Border.new edges
+</pre>
+</div>
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Instance methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000002"></a>
+<b>initialize</b>(...)
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000003"></a>
+<b>l</b>()
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000004"></a>
+<b>l=</b>(p1)
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000005"></a>
+<b>left</b>()
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000006"></a>
+<b>left=</b>(p1)
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000007"></a>
+<b>r</b>()
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000008"></a>
+<b>r=</b>(p1)
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000009"></a>
+<b>right</b>()
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000010"></a>
+<b>right=</b>(p1)
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000011"></a>
+<b>t</b>()
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000012"></a>
+<b>t=</b>(p1)
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000013"></a>
+<b>top</b>()
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000014"></a>
+<b>top=</b>(p1)
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000015"></a>
+<b>b</b>()
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000016"></a>
+<b>b=</b>(p1)
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000017"></a>
+<b>bottom</b>()
+</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000018"></a>
+<b>bottom=</b>(p1)
+</td></tr>
+</table>
+
+</body>

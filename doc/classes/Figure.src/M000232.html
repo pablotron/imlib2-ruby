@@ -1,0 +1,55 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>output (Figure)</title>
+<link rel=StyleSheet href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File tutorial/build_docs.rb, line 20</span>
+  <span class="kw">def</span> output()
+    <span class="kw">yield</span> &quot;&lt;table border='#{@border}' \n&quot;                          + 
+          &quot;       cellpadding='#{@cellpad}' \n&quot;                    + 
+          &quot;       width='#{@width}'&gt;\n&quot;                            + 
+          <span class="str">&quot;  &lt;tr&gt;\n&quot;</span>                                               +
+          &quot;    &lt;td width='#{@td_width}' \n&quot;                        + 
+          &quot;        bgcolor='#{@title_bgcolor}' \n&quot;                 +
+          <span class="str">&quot;        class='fig-title'&gt; \n&quot;</span>                          +
+          &quot;      &lt;a name='fig_#{figure}'&gt;\n&quot;                       + 
+          &quot;        &lt;b&gt;Figure #{@figure}: #{title}&lt;/b&gt;\n&quot;           +
+          <span class="str">&quot;      &lt;/a&gt;\n&quot;</span>                                           +
+          <span class="str">&quot;    &lt;/td&gt;\n&quot;</span>                                            +
+          <span class="str">&quot;  &lt;/tr&gt;\n&quot;</span>                                              +
+          <span class="str">&quot;  &lt;tr&gt;\n&quot;</span>                                               +
+          &quot;    &lt;td width='#{@td_width}' \n&quot;                        + 
+          &quot;        bgcolor='#{@text_bgcolor}' \n&quot;                  +
+          <span class="str">&quot;        class='fig-text'&gt; \n&quot;</span>                           +
+          <span class="str">&quot;      &lt;pre&gt;\n\n&quot;</span>
+
+    File.open(@example_file) { |file|
+      i = 0
+      file.each { |line|
+        i += 1
+        <span class="kw">yield</span> sprintf(<span class="str">'&lt;a name=\'fig_%s-line_%s\'&gt;% 3s&lt;/a&gt;. %s'</span>,
+                      @figure, i, i, line)
+      }
+    }
+
+    <span class="kw">yield</span> <span class="str">&quot;      &lt;/pre&gt;\n&quot;</span>                                         +
+          <span class="str">&quot;    &lt;/td&gt;\n&quot;</span>                                            +
+          <span class="str">&quot;  &lt;/tr&gt;\n&quot;</span>                                              +
+          <span class="str">&quot;  &lt;tr&gt;\n&quot;</span>                                               +
+          &quot;    &lt;td width='#{@td_width}' \n&quot;                        + 
+          &quot;        bgcolor='#{@footer_bgcolor}'  \n&quot;               +
+          <span class="str">&quot;        class='fig-footer'&gt; \n&quot;</span>                         +
+          &quot;      [ &lt;a href='#{@example_file}' \n&quot;                  + 
+          <span class="str">&quot;           class='fig-footer-link'&gt;Download&lt;/a&gt; ] \n&quot;</span>   +
+          &quot;      [ &lt;a href='#{@example_output}' \n&quot;                + 
+          <span class="str">&quot;           class='fig-footer-link'&gt;Output&lt;/a&gt; ] \n&quot;</span>     +
+          <span class="str">&quot;    &lt;/td&gt;\n&quot;</span>                                            +
+          <span class="str">&quot;  &lt;/tr&gt;\n&quot;</span>                                              +
+          <span class="str">&quot;&lt;/table&gt;\n&quot;</span>
+  <span class="kw">end</span></pre>
+</body>
+</html>

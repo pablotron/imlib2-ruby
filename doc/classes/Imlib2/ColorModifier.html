@@ -1,0 +1,193 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html><head>
+  <title>Class: Imlib2::ColorModifier</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel=StyleSheet href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript" language="JavaScript">
+  <!--
+  function popCode(url) {
+    window.open(url, "Code", 
+          "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+  //-->
+  </script>
+</head>
+
+<body bgcolor="white">
+
+<table summary="Information on class" width="100%" border="0" cellspacing="0">
+ <tr class="title-row">
+ <td class="big-title-font">
+   <sup><font color="aqua">Class</font></sup> Imlib2::ColorModifier
+ </td>
+ <td align="right">
+   <table summary="layout" cellspacing="0" cellpadding="2">
+     <tr valign="top">
+      <td class="small-title-font">In:</td>
+      <td class="small-title-font">
+        <a href="../../files/imlib2_c.html" class="aqua">
+imlib2.c
+         </a>
+<br />
+      </td>
+     </tr>
+     <tr>
+      <td class="small-title-font">Parent:</td>
+      <td class="small-title-font">
+Object
+      </td>
+     </tr>
+   </table>
+  </td>
+  </tr>
+</table>
+  <!-- banner header -->
+
+
+
+
+
+<table summary="Methods" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Methods</td></tr>
+</table>
+<div class="name-list">
+<a href="#M000348">brightness=</a>&nbsp; &nbsp;
+<a href="#M000349">contrast=</a>&nbsp; &nbsp;
+<a href="#M000347">gamma=</a>&nbsp; &nbsp;
+<a href="#M000346">initialize</a>&nbsp; &nbsp;
+<a href="#M000345">new</a>&nbsp; &nbsp;
+<a href="#M000350">reset</a>&nbsp; &nbsp;
+</div>
+
+
+
+
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Class methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000345"></a>
+<a href="ColorModifier.src/M000345.html" target="Code" class="methodtitle"
+ onClick="popCode('ColorModifier.src/M000345.html');return false;">
+<b>new</b>(VALUE klass)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Returns a new <a href="ColorModifier.html">Imlib2::ColorModifier</a>
+</p>
+<p>
+Example:
+</p>
+<pre>
+  cmod = Imlib2::ColorModifier.new
+</pre>
+</div>
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Instance methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000346"></a>
+<a href="ColorModifier.src/M000346.html" target="Code" class="methodtitle"
+ onClick="popCode('ColorModifier.src/M000346.html');return false;">
+<b>initialize</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+<a href="ColorModifier.html">Imlib2::ColorModifier</a> constructor
+</p>
+<p>
+This method takes no arguments.
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000347"></a>
+<a href="ColorModifier.src/M000347.html" target="Code" class="methodtitle"
+ onClick="popCode('ColorModifier.src/M000347.html');return false;">
+<b>gamma=</b>(VALUE self, VALUE gamma)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the gamma value.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  cmod.gamma = 0.5
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000348"></a>
+<a href="ColorModifier.src/M000348.html" target="Code" class="methodtitle"
+ onClick="popCode('ColorModifier.src/M000348.html');return false;">
+<b>brightness=</b>(VALUE self, VALUE brightness)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the brightness value.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  cmod.brightness = 2.0
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000349"></a>
+<a href="ColorModifier.src/M000349.html" target="Code" class="methodtitle"
+ onClick="popCode('ColorModifier.src/M000349.html');return false;">
+<b>contrast=</b>(VALUE self, VALUE contrast)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the contrast value.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  cmod.contrast = 0.8
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000350"></a>
+<a href="ColorModifier.src/M000350.html" target="Code" class="methodtitle"
+ onClick="popCode('ColorModifier.src/M000350.html');return false;">
+<b>reset</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Reset the <a href="ColorModifier.html">Imlib2::ColorModifier</a>
+</p>
+<p>
+Example:
+</p>
+<pre>
+  cmod.reset
+</pre>
+</div>
+
+</body>

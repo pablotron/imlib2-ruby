@@ -1,0 +1,39 @@
+Imlib2-Ruby 0.4.1 README
+========================
+
+This document was last updated on Monday, April 22 13:49:36 2002 EST.
+Please see the file COPYING for licensing and warranty information.  The
+latest version of this library is available at the following URL:
+http://www.pablotron.org/software/imlib2-ruby/.
+
+Introduction
+============
+Imlib2-Ruby is a Ruby interface to Imlib2.  Border, Cache, Color, Color
+Modifier, Color Range (Gradient), Context, Ellipse, Filter (static and
+scripted), Font, Image (all non-X11 calls), Polygon, and TrueType
+Encoding calls are all implemented;  X11 calls are not supported yet.
+I've provided a my test script and handful of commented scripts in
+examples/, and there's an rdoc-generated API reference in doc/ (which
+you can rebuild yourself by typing "rdoc ./imlib2.c"). Feel free to
+email me at the address below if you have any additional questions.
+
+System Requirements
+===================
+- Imlib2, version 1.0.5 (or newer):
+  http://www.enlightenment.org/pages/imlib2.html
+  (you can find source tarballs and RPMs at the following URL)
+  ftp://ftp.sourceforge.net/pub/sourceforge/enlightenment/
+- Ruby, version 1.6.x (or newer):
+  http://www.ruby-lang.org/
+
+Installation
+============
+ruby ./extconf.rb            # generate Makefile
+make && su -c "make install" # compile and install library
+
+About the Author
+================
+Paul Duncan <pabs@pablotron.org>
+http://www.pablotron.org/
+
+See the file AUTHORS for additional contributions.

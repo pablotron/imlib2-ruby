@@ -1,0 +1,473 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html><head>
+  <title>Class: Imlib2::Color::HlsaColor</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel=StyleSheet href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript" language="JavaScript">
+  <!--
+  function popCode(url) {
+    window.open(url, "Code", 
+          "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+  //-->
+  </script>
+</head>
+
+<body bgcolor="white">
+
+<table summary="Information on class" width="100%" border="0" cellspacing="0">
+ <tr class="title-row">
+ <td class="big-title-font">
+   <sup><font color="aqua">Class</font></sup> Imlib2::Color::HlsaColor
+ </td>
+ <td align="right">
+   <table summary="layout" cellspacing="0" cellpadding="2">
+     <tr valign="top">
+      <td class="small-title-font">In:</td>
+      <td class="small-title-font">
+        <a href="../../../files/imlib2_c.html" class="aqua">
+imlib2.c
+         </a>
+<br />
+      </td>
+     </tr>
+     <tr>
+      <td class="small-title-font">Parent:</td>
+      <td class="small-title-font">
+Object
+      </td>
+     </tr>
+   </table>
+  </td>
+  </tr>
+</table>
+  <!-- banner header -->
+
+
+
+
+
+<table summary="Methods" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Methods</td></tr>
+</table>
+<div class="name-list">
+<a href="#M000069">a</a>&nbsp; &nbsp;
+<a href="#M000070">a=</a>&nbsp; &nbsp;
+<a href="#M000071">alpha</a>&nbsp; &nbsp;
+<a href="#M000072">alpha=</a>&nbsp; &nbsp;
+<a href="#M000057">h</a>&nbsp; &nbsp;
+<a href="#M000058">h=</a>&nbsp; &nbsp;
+<a href="#M000059">hue</a>&nbsp; &nbsp;
+<a href="#M000060">hue=</a>&nbsp; &nbsp;
+<a href="#M000056">initialize</a>&nbsp; &nbsp;
+<a href="#M000061">l</a>&nbsp; &nbsp;
+<a href="#M000062">l=</a>&nbsp; &nbsp;
+<a href="#M000063">lightness</a>&nbsp; &nbsp;
+<a href="#M000064">lightness=</a>&nbsp; &nbsp;
+<a href="#M000055">new</a>&nbsp; &nbsp;
+<a href="#M000065">s</a>&nbsp; &nbsp;
+<a href="#M000066">s=</a>&nbsp; &nbsp;
+<a href="#M000067">saturation</a>&nbsp; &nbsp;
+<a href="#M000068">saturation=</a>&nbsp; &nbsp;
+</div>
+
+
+
+
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Class methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000055"></a>
+<a href="HlsaColor.src/M000055.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000055.html');return false;">
+<b>new</b>(int argc, VALUE *argv, VALUE klass)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Returns a new <a href="HlsaColor.html">Imlib2::Color::HlsaColor</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  h, l, s, a = 255, 0, 0, 255
+  border = Imlib2::Color::HlsaColor.new h, l, s, a
+
+  values = [255, 0, 0, 255]
+  border = Imlib2::Color::HlsaColor.new values
+</pre>
+</div>
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Instance methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000056"></a>
+<a href="HlsaColor.src/M000056.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000056.html');return false;">
+<b>initialize</b>(int argc, VALUE *argv, VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+<a href="HlsaColor.html">Imlib2::Color::HlsaColor</a> constructor.
+</p>
+<p>
+Parameters are identical to Imlib2::Color::HlsaColor::new.
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000057"></a>
+<a href="HlsaColor.src/M000057.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000057.html');return false;">
+<b>h</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the hue element of a <a href="HlsaColor.html">HlsaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.hue
+  amount = color.h
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000058"></a>
+<a href="HlsaColor.src/M000058.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000058.html');return false;">
+<b>h=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the hue element of a <a href="HlsaColor.html">HlsaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.hue = 255
+  color.h = 255
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000059"></a>
+<a href="HlsaColor.src/M000059.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000059.html');return false;">
+<b>hue</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the hue element of a <a href="HlsaColor.html">HlsaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.hue
+  amount = color.h
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000060"></a>
+<a href="HlsaColor.src/M000060.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000060.html');return false;">
+<b>hue=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the hue element of a <a href="HlsaColor.html">HlsaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.hue = 255
+  color.h = 255
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000061"></a>
+<a href="HlsaColor.src/M000061.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000061.html');return false;">
+<b>l</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the lightness element of a <a href="HlsaColor.html">HlsaColor</a>
+object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.lightness
+  amount = color.l
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000062"></a>
+<a href="HlsaColor.src/M000062.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000062.html');return false;">
+<b>l=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the lightness element of a <a href="HlsaColor.html">HlsaColor</a>
+object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.lightness = 255
+  color.l = 255
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000063"></a>
+<a href="HlsaColor.src/M000063.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000063.html');return false;">
+<b>lightness</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the lightness element of a <a href="HlsaColor.html">HlsaColor</a>
+object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.lightness
+  amount = color.l
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000064"></a>
+<a href="HlsaColor.src/M000064.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000064.html');return false;">
+<b>lightness=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the lightness element of a <a href="HlsaColor.html">HlsaColor</a>
+object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.lightness = 255
+  color.l = 255
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000065"></a>
+<a href="HlsaColor.src/M000065.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000065.html');return false;">
+<b>s</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the saturation element of a <a href="HlsaColor.html">HlsaColor</a>
+object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.saturation
+  amount = color.s
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000066"></a>
+<a href="HlsaColor.src/M000066.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000066.html');return false;">
+<b>s=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the saturation element of a <a href="HlsaColor.html">HlsaColor</a>
+object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.saturation = 255
+  color.h = 255
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000067"></a>
+<a href="HlsaColor.src/M000067.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000067.html');return false;">
+<b>saturation</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the saturation element of a <a href="HlsaColor.html">HlsaColor</a>
+object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.saturation
+  amount = color.s
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000068"></a>
+<a href="HlsaColor.src/M000068.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000068.html');return false;">
+<b>saturation=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the saturation element of a <a href="HlsaColor.html">HlsaColor</a>
+object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.saturation = 255
+  color.h = 255
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000069"></a>
+<a href="HlsaColor.src/M000069.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000069.html');return false;">
+<b>a</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the alpha element of a <a href="HlsaColor.html">HlsaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.alpha
+  amount = color.a
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000070"></a>
+<a href="HlsaColor.src/M000070.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000070.html');return false;">
+<b>a=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the alpha element of a <a href="HlsaColor.html">HlsaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.alpha = 255
+  color.a = 255
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000071"></a>
+<a href="HlsaColor.src/M000071.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000071.html');return false;">
+<b>alpha</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the alpha element of a <a href="HlsaColor.html">HlsaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.alpha
+  amount = color.a
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000072"></a>
+<a href="HlsaColor.src/M000072.html" target="Code" class="methodtitle"
+ onClick="popCode('HlsaColor.src/M000072.html');return false;">
+<b>alpha=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the alpha element of a <a href="HlsaColor.html">HlsaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.alpha = 255
+  color.a = 255
+</pre>
+</div>
+
+</body>

@@ -1,0 +1,16 @@
+./examples/checkerboard.rb
+./examples/fonts/20thcent.ttf
+./examples/images/bill_gates.jpg
+./examples/images/clown.jpg
+./examples/test_imlib2.rb
+./examples/test_font.rb
+./examples/checkerboard2.rb
+./doc/api.txt
+./imlib2.c
+./COPYING
+./README
+./TODO
+./MANIFEST
+./depend
+./ChangeLog
+./extconf.rb

@@ -1,0 +1,22 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>draw_squares (CheckerBoard)</title>
+<link rel=StyleSheet href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body bgcolor="white">
+<pre><span class="cmt"># File examples/oo-board.rb, line 31</span>
+  <span class="kw">def</span> draw_squares()
+    0.upto(@w / 2) { |x|
+      0.upto(@h / 2) { |y|
+        (0..1).each { |i|
+          rect = [x * @bw * 2 + @bw * i, y * @bh * 2 + @bh * i, @bw, @bh]
+          @im.fill_rect rect, @fg
+        }
+      }
+    }
+  <span class="kw">end</span></pre>
+</body>
+</html>

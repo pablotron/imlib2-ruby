@@ -1,0 +1,142 @@
+* Wednesday, March 27 11:04:01 2002 EST
+  * released version 0.1.0 yesterday
+
+* Thursday, March 28 20:20:11 2002 EST 
+  * added ellipse routines (Imlib2::Image#{draw,fill}_ellipse)
+  * added rotation routines (Imlib2::Image#rotate{,!})
+  * updated checkerboard.rb to draw pieces as well (to test
+    {draw,fill}_ellipse)
+
+* Saturday, March 30 15:07:02 2002 EST 
+  * added draw_oval and fill_oval (more concice aliases for *_ellipse)
+  * better comments in examples/checkerboard.rb
+  * fixed blue/green mixup in set_context_color()
+  * added object-oriented version of examples/checkerboard.rb
+    (examples/checkerboard2.rb)
+  * updated doc/api.txt with new ellipse calls
+
+* Saturday, March 30 19:11:56 2002 EST 
+  * added Imlib2::Font (and associated methods)
+  * added Imlib2::Cache  (and associated methods)
+  * added Imlib2::Font::{add,remove}_path, Imlib2::Font::paths
+
+* Saturday, March 30 20:11:18 2002 EST
+  * added Imlib2::Image#draw_text() -- works as follows:
+    im.draw_text font, text, [x, y]
+    im.draw_text font, text, [x, y], color
+    im.draw_text font, text, {'x' => x, 'y' => y}
+    im.draw_text font, text, {'x' => x, 'y' => y}, color
+    im.draw_text font, text, x, y
+    im.draw_text font, text, x, y, color
+  * fixed color setting routines (had 0 for argument count)
+
+* Saturday, March 30 21:04:46 2002 EST
+  * added examples/test_font.rb
+  * added font, cache, and font path calls to doc/api.txt
+
+* Saturday, March 30 22:08:32 2002 EST
+  * added better comments in examples/test_font.rb
+  * released version 0.2.0
+
+* Sunday, March 31 06:04:06 2002 EST
+  * added Imlib2::Gradient::* (Imlib_Color_Range)
+  * added Imlib2::Image#{,fill_}gradient
+  * examples/checkerboard.rb now uses a Gradient for the foreground color
+  * added Imlib2::ColorRange (inherits from Imlib2::Gradient, so it's
+    essentially an alias for Gradient)
+
+* Sunday, March 31 06:46:36 2002 EST
+  * added Imlib2::Polygon::*
+  * added examples/test_poly.rb
+  * renamed examples/checkerboard2.rb to examples/oo-board.rb
+
+* Sunday, March 31 07:50:19 2002 EST
+  * added Imlib2::Image::blend_image! and Imlib2::Image::blend_image
+    (and also their more concise synonyms: blend! and blend, respectively)
+
+* Sunday, March 31 16:42:32 2002 EST
+  * released 0.3.0
+
+* Sunday, April 14 02:17:11 2002 EST
+  * inline documentation (for rdoc) finished for Imlib2::Border,
+    Imlib2::Cache, and Imlib2::Color::RgbaColor.
+
+* Sunday, April 14 04:01:55 2002 EST 
+  * inline documentation for Imlib2::Color::HsvaColor
+  * changed border.{l,l=,r,r=,t,t=,b,b=} to aliases instead of method
+    defines
+
+* Wednesday, April 17 15:58:40 2002 EST
+  * added Imlib2::Filter and associated methods
+  * Imlib2::Image#filter (it's polymorphic; takes either a String,
+    which it passes to imlib_apply_filter(), or an Imlib2::Filter,
+    which it passes to imlib_image_filter()).  the explicit calls 
+    are Imlib2::Image#string_filter and Imlib2::Image#static_filter,
+    respectively.
+
+* Wednesday, April 17 16:35:36 2002 EST
+  * added support for text directions (via Imlib2::Direction::LEFT,
+    Imlib2::Direction::RIGHT, etc).  it's now an optional last argument
+    to Imlib2::Image::#draw_text
+
+* Thursday, April 18 14:06:17 2002 EST
+  * added Imlib2::ColorModifier
+  * added Imlib2::Image#apply_color_modifier and Imlib2::Image#apply_cmod
+    they take either a color modifier or a color modifier and a rectangle
+  * added Imlib2::Encoding (font encoding constants)
+  * initial Imlib2::Context code.
+
+* Thursday, April 18 15:44:57 2002 EST
+  * all non-X11 context calls available, except for progress callbacks.
+
+* Thursday, April 18 19:34:38 2002 EST
+  * updated README to reflect post-0.2.0 features.
+  * applied extconf.rb patch from Akinori Musha <knu@iDaemons.org>
+  * added AUTHORS.
+
+* Thursday, April 18 20:09:59 2002 EST
+  * documentation for Imlib2::Color::HlsaColor methods
+  * documentation for Imlib2::Color::CmyaColor methods
+  * documentation for Imlib2::Image::load_* methods
+
+* Friday, April 19 00:05:04 2002 EST
+  * documentation for all Imlib2::Image methods
+  * documentation for all Imlib2::Font methods
+  * documentation for all Imlib2::Gradient methods
+  * documentation for all Imlib2::Filter methods
+  * documentation for all Imlib2::Context methods
+
+* Friday, April 19 01:22:06 2002 EST
+  * updated TODO
+  * posted docs online (http://www.pablotron.org/software/imlib2-ruby/doc/)
+  * updated README to mention doc/ dir
+  * copied ChangeLog online
+  * released 0.4.0
+
+* Monday, April 22 11:48:33 2002 EST
+  * fixed a bug in draw_pixel reported by Phlip (phlip_cpp@yahoo.com).
+  * updated Imlib2 requirement in README, and added a link to the source
+    download (via Sourceforge FTP).
+  * change Imlib2::Context get methods so they don't require an argument
+    (oops :D)
+  * added workaround for broken imlib_image_draw_pixel() call (uses
+    imlib_image_draw_rectangle() instead)
+  * released 0.4.1
+
+* Wednesday, April 24 22:00:37 2002 EST
+  * removed tutorial/ directory (how the hell did that get in the main
+    release?)
+  * minor fix to examples/checkerboard.rb (and examples/oo-board.rb) to
+    avoid imlib2 fill_ellipse bug
+
+* Sunday, April 28 21:48:36 2002 EST
+  * added Imlib2::Image::draw_pixel_workaround{?,=} to enable or disable
+    imlib_image_draw_pixel() work-around behavior
+  * changed minor number to 5 (0.5.0)
+  * added X11 calls
+  * partial support for X11 primitives in Imlib2::X11, although I doubt
+    they interact properly with Ruby/X11 or Ruby/Xlib properly.
+  * TODO: Ruby/Gtk+ support (via gdkx primitive wrappers)
+  * changed all instances (except one, where it was appropriate) of
+    STR2CSTR() to RSTRING(blah)->ptr.  should be a minor speed increase
+    (and, more importantly, it won't leak memory any more)

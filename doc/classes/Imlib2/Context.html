@@ -1,0 +1,1677 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html><head>
+  <title>Class: Imlib2::Context</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel=StyleSheet href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript" language="JavaScript">
+  <!--
+  function popCode(url) {
+    window.open(url, "Code", 
+          "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+  //-->
+  </script>
+</head>
+
+<body bgcolor="white">
+
+<table summary="Information on class" width="100%" border="0" cellspacing="0">
+ <tr class="title-row">
+ <td class="big-title-font">
+   <sup><font color="aqua">Class</font></sup> Imlib2::Context
+ </td>
+ <td align="right">
+   <table summary="layout" cellspacing="0" cellpadding="2">
+     <tr valign="top">
+      <td class="small-title-font">In:</td>
+      <td class="small-title-font">
+        <a href="../../files/imlib2_c.html" class="aqua">
+imlib2.c
+         </a>
+<br />
+      </td>
+     </tr>
+     <tr>
+      <td class="small-title-font">Parent:</td>
+      <td class="small-title-font">
+Object
+      </td>
+     </tr>
+   </table>
+  </td>
+  </tr>
+</table>
+  <!-- banner header -->
+
+
+
+
+
+<table summary="Methods" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Methods</td></tr>
+</table>
+<div class="name-list">
+<a href="#M000118">aa</a>&nbsp; &nbsp;
+<a href="#M000115">aa=</a>&nbsp; &nbsp;
+<a href="#M000148">angle</a>&nbsp; &nbsp;
+<a href="#M000146">angle=</a>&nbsp; &nbsp;
+<a href="#M000117">anti_alias</a>&nbsp; &nbsp;
+<a href="#M000114">anti_alias=</a>&nbsp; &nbsp;
+<a href="#M000122">blend</a>&nbsp; &nbsp;
+<a href="#M000120">blend=</a>&nbsp; &nbsp;
+<a href="#M000168">cliprect</a>&nbsp; &nbsp;
+<a href="#M000166">cliprect=</a>&nbsp; &nbsp;
+<a href="#M000128">cmod</a>&nbsp; &nbsp;
+<a href="#M000125">cmod=</a>&nbsp; &nbsp;
+<a href="#M000152">color</a>&nbsp; &nbsp;
+<a href="#M000150">color=</a>&nbsp; &nbsp;
+<a href="#M000127">color_modifier</a>&nbsp; &nbsp;
+<a href="#M000124">color_modifier=</a>&nbsp; &nbsp;
+<a href="#M000108">current</a>&nbsp; &nbsp;
+<a href="#M000144">dir</a>&nbsp; &nbsp;
+<a href="#M000141">dir=</a>&nbsp; &nbsp;
+<a href="#M000143">direction</a>&nbsp; &nbsp;
+<a href="#M000140">direction=</a>&nbsp; &nbsp;
+<a href="#M000112">dither_mask</a>&nbsp; &nbsp;
+<a href="#M000110">dither_mask=</a>&nbsp; &nbsp;
+<a href="#M000174">encoding</a>&nbsp; &nbsp;
+<a href="#M000171">encoding=</a>&nbsp; &nbsp;
+<a href="#M000138">font</a>&nbsp; &nbsp;
+<a href="#M000136">font=</a>&nbsp; &nbsp;
+<a href="#M000107">get</a>&nbsp; &nbsp;
+<a href="#M000147">get_angle</a>&nbsp; &nbsp;
+<a href="#M000116">get_anti_alias</a>&nbsp; &nbsp;
+<a href="#M000121">get_blend</a>&nbsp; &nbsp;
+<a href="#M000167">get_cliprect</a>&nbsp; &nbsp;
+<a href="#M000151">get_color</a>&nbsp; &nbsp;
+<a href="#M000126">get_color_modifier</a>&nbsp; &nbsp;
+<a href="#M000142">get_direction</a>&nbsp; &nbsp;
+<a href="#M000111">get_dither_mask</a>&nbsp; &nbsp;
+<a href="#M000172">get_encoding</a>&nbsp; &nbsp;
+<a href="#M000137">get_font</a>&nbsp; &nbsp;
+<a href="#M000155">get_gradient</a>&nbsp; &nbsp;
+<a href="#M000163">get_image</a>&nbsp; &nbsp;
+<a href="#M000132">get_operation</a>&nbsp; &nbsp;
+<a href="#M000159">get_progress_granularity</a>&nbsp; &nbsp;
+<a href="#M000173">get_ttf_encoding</a>&nbsp; &nbsp;
+<a href="#M000156">gradient</a>&nbsp; &nbsp;
+<a href="#M000154">gradient=</a>&nbsp; &nbsp;
+<a href="#M000164">image</a>&nbsp; &nbsp;
+<a href="#M000162">image=</a>&nbsp; &nbsp;
+<a href="#M000104">initialize</a>&nbsp; &nbsp;
+<a href="#M000103">new</a>&nbsp; &nbsp;
+<a href="#M000134">op</a>&nbsp; &nbsp;
+<a href="#M000131">op=</a>&nbsp; &nbsp;
+<a href="#M000133">operation</a>&nbsp; &nbsp;
+<a href="#M000130">operation=</a>&nbsp; &nbsp;
+<a href="#M000106">pop</a>&nbsp; &nbsp;
+<a href="#M000160">progress_granularity</a>&nbsp; &nbsp;
+<a href="#M000158">progress_granularity=</a>&nbsp; &nbsp;
+<a href="#M000105">push</a>&nbsp; &nbsp;
+<a href="#M000145">set_angle</a>&nbsp; &nbsp;
+<a href="#M000113">set_anti_alias</a>&nbsp; &nbsp;
+<a href="#M000119">set_blend</a>&nbsp; &nbsp;
+<a href="#M000165">set_cliprect</a>&nbsp; &nbsp;
+<a href="#M000149">set_color</a>&nbsp; &nbsp;
+<a href="#M000123">set_color_modifier</a>&nbsp; &nbsp;
+<a href="#M000139">set_direction</a>&nbsp; &nbsp;
+<a href="#M000109">set_dither_mask</a>&nbsp; &nbsp;
+<a href="#M000170">set_encoding</a>&nbsp; &nbsp;
+<a href="#M000135">set_font</a>&nbsp; &nbsp;
+<a href="#M000153">set_gradient</a>&nbsp; &nbsp;
+<a href="#M000161">set_image</a>&nbsp; &nbsp;
+<a href="#M000129">set_operation</a>&nbsp; &nbsp;
+<a href="#M000157">set_progress_granularity</a>&nbsp; &nbsp;
+<a href="#M000169">set_ttf_encoding</a>&nbsp; &nbsp;
+</div>
+
+
+
+
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Class methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000103"></a>
+<a href="Context.src/M000103.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000103.html');return false;">
+<b>new</b>(VALUE klass)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Return a new <a href="Context.html">Imlib2::Context</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx = Imlib2::Context.new
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000106"></a>
+<a href="Context.src/M000106.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000106.html');return false;">
+<b>pop</b>(klass)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Pop the top context off the context stack.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx = Imlib2::Context.pop
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000107"></a>
+<a href="Context.src/M000107.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000107.html');return false;">
+<b>get</b>(klass)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Return the current context.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx = Imlib2::Context.get
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000108"></a>
+<a href="Context.src/M000108.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000108.html');return false;">
+<b>current</b>(klass)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Return the current context.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx = Imlib2::Context.get
+</pre>
+</div>
+<table summary="Method list" cellpadding="5" width="100%">
+<tr><td class="tablesubtitle">Public Instance methods</td></tr>
+</table>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000104"></a>
+<a href="Context.src/M000104.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000104.html');return false;">
+<b>initialize</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+<a href="Context.html">Imlib2::Context</a> constructor.
+</p>
+<p>
+Currently just a placeholder
+</p>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000105"></a>
+<a href="Context.src/M000105.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000105.html');return false;">
+<b>push</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Push this context onto the context stack.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.push
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000109"></a>
+<a href="Context.src/M000109.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000109.html');return false;">
+<b>set_dither_mask</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the <a href="Context.html#M000112">dither_mask</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.dither_mask = true
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000110"></a>
+<a href="Context.src/M000110.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000110.html');return false;">
+<b>dither_mask=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the <a href="Context.html#M000112">dither_mask</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.dither_mask = true
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000111"></a>
+<a href="Context.src/M000111.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000111.html');return false;">
+<b>get_dither_mask</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the <a href="Context.html#M000112">dither_mask</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.dither_mask == true
+    puts 'dither_mask enabled'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000112"></a>
+<a href="Context.src/M000112.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000112.html');return false;">
+<b>dither_mask</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the <a href="Context.html#M000112">dither_mask</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.dither_mask == true
+    puts 'dither_mask enabled'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000113"></a>
+<a href="Context.src/M000113.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000113.html');return false;">
+<b>set_anti_alias</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the <a href="Context.html#M000117">anti_alias</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.anti_alias = true
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000114"></a>
+<a href="Context.src/M000114.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000114.html');return false;">
+<b>anti_alias=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the <a href="Context.html#M000117">anti_alias</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.anti_alias = true
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000115"></a>
+<a href="Context.src/M000115.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000115.html');return false;">
+<b>aa=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the <a href="Context.html#M000117">anti_alias</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.anti_alias = true
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000116"></a>
+<a href="Context.src/M000116.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000116.html');return false;">
+<b>get_anti_alias</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the <a href="Context.html#M000117">anti_alias</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.anti_alias == true
+    puts 'anti_alias enabled.'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000117"></a>
+<a href="Context.src/M000117.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000117.html');return false;">
+<b>anti_alias</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the <a href="Context.html#M000117">anti_alias</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.anti_alias == true
+    puts 'anti_alias enabled.'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000118"></a>
+<a href="Context.src/M000118.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000118.html');return false;">
+<b>aa</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the <a href="Context.html#M000117">anti_alias</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.anti_alias == true
+    puts 'anti_alias enabled.'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000119"></a>
+<a href="Context.src/M000119.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000119.html');return false;">
+<b>set_blend</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the blend flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.blend = true
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000120"></a>
+<a href="Context.src/M000120.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000120.html');return false;">
+<b>blend=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the blend flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.blend = true
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000121"></a>
+<a href="Context.src/M000121.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000121.html');return false;">
+<b>get_blend</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the blend flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.blend
+    puts 'blend enabled.'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000122"></a>
+<a href="Context.src/M000122.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000122.html');return false;">
+<b>blend</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the blend flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.blend
+    puts 'blend enabled.'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000123"></a>
+<a href="Context.src/M000123.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000123.html');return false;">
+<b>set_color_modifier</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current color modifier (<a
+href="ColorModifier.html">Imlib2::ColorModifier</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.cmod = cmod
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000124"></a>
+<a href="Context.src/M000124.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000124.html');return false;">
+<b>color_modifier=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current color modifier (<a
+href="ColorModifier.html">Imlib2::ColorModifier</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.cmod = cmod
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000125"></a>
+<a href="Context.src/M000125.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000125.html');return false;">
+<b>cmod=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current color modifier (<a
+href="ColorModifier.html">Imlib2::ColorModifier</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.cmod = cmod
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000126"></a>
+<a href="Context.src/M000126.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000126.html');return false;">
+<b>get_color_modifier</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current color modifier (<a
+href="ColorModifier.html">Imlib2::ColorModifier</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  cmod = ctx.cmod
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000127"></a>
+<a href="Context.src/M000127.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000127.html');return false;">
+<b>color_modifier</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current color modifier (<a
+href="ColorModifier.html">Imlib2::ColorModifier</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  cmod = ctx.cmod
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000128"></a>
+<a href="Context.src/M000128.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000128.html');return false;">
+<b>cmod</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current color modifier (<a
+href="ColorModifier.html">Imlib2::ColorModifier</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  cmod = ctx.cmod
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000129"></a>
+<a href="Context.src/M000129.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000129.html');return false;">
+<b>set_operation</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current operation (<a href="Op.html">Imlib2::Op</a> or <a
+href="Operation.html">Imlib2::Operation</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.operation = Imlib2::Op::COPY
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000130"></a>
+<a href="Context.src/M000130.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000130.html');return false;">
+<b>operation=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current operation (<a href="Op.html">Imlib2::Op</a> or <a
+href="Operation.html">Imlib2::Operation</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.operation = Imlib2::Op::COPY
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000131"></a>
+<a href="Context.src/M000131.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000131.html');return false;">
+<b>op=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current operation (<a href="Op.html">Imlib2::Op</a> or <a
+href="Operation.html">Imlib2::Operation</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.operation = Imlib2::Op::COPY
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000132"></a>
+<a href="Context.src/M000132.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000132.html');return false;">
+<b>get_operation</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current operation (<a href="Op.html">Imlib2::Op</a> or <a
+href="Operation.html">Imlib2::Operation</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.op == Imlib2::Op::COPY
+    puts 'copy operation'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000133"></a>
+<a href="Context.src/M000133.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000133.html');return false;">
+<b>operation</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current operation (<a href="Op.html">Imlib2::Op</a> or <a
+href="Operation.html">Imlib2::Operation</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.op == Imlib2::Op::COPY
+    puts 'copy operation'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000134"></a>
+<a href="Context.src/M000134.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000134.html');return false;">
+<b>op</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current operation (<a href="Op.html">Imlib2::Op</a> or <a
+href="Operation.html">Imlib2::Operation</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.op == Imlib2::Op::COPY
+    puts 'copy operation'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000135"></a>
+<a href="Context.src/M000135.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000135.html');return false;">
+<b>set_font</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current font (<a href="Font.html">Imlib2::Font</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.font = Imlib2::Font.new 'helvetica/12'
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000136"></a>
+<a href="Context.src/M000136.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000136.html');return false;">
+<b>font=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current font (<a href="Font.html">Imlib2::Font</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.font = Imlib2::Font.new 'helvetica/12'
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000137"></a>
+<a href="Context.src/M000137.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000137.html');return false;">
+<b>get_font</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current font (<a href="Font.html">Imlib2::Font</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = ctx.font
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000138"></a>
+<a href="Context.src/M000138.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000138.html');return false;">
+<b>font</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current font (<a href="Font.html">Imlib2::Font</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = ctx.font
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000139"></a>
+<a href="Context.src/M000139.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000139.html');return false;">
+<b>set_direction</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current font direction (<a href="Dir.html">Imlib2::Dir</a> or <a
+href="Direction.html">Imlib2::Direction</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.direction = Imlib2::Direction::LEFT
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000140"></a>
+<a href="Context.src/M000140.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000140.html');return false;">
+<b>direction=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current font direction (<a href="Dir.html">Imlib2::Dir</a> or <a
+href="Direction.html">Imlib2::Direction</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.direction = Imlib2::Direction::LEFT
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000141"></a>
+<a href="Context.src/M000141.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000141.html');return false;">
+<b>dir=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current font direction (<a href="Dir.html">Imlib2::Dir</a> or <a
+href="Direction.html">Imlib2::Direction</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.direction = Imlib2::Direction::LEFT
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000142"></a>
+<a href="Context.src/M000142.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000142.html');return false;">
+<b>get_direction</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current font direction (<a href="Dir.html">Imlib2::Dir</a> or <a
+href="Direction.html">Imlib2::Direction</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.direction != Imlib2::Direction::RIGHT
+    puts 'drawing funny text'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000143"></a>
+<a href="Context.src/M000143.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000143.html');return false;">
+<b>direction</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current font direction (<a href="Dir.html">Imlib2::Dir</a> or <a
+href="Direction.html">Imlib2::Direction</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.direction != Imlib2::Direction::RIGHT
+    puts 'drawing funny text'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000144"></a>
+<a href="Context.src/M000144.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000144.html');return false;">
+<b>dir</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current font direction (<a href="Dir.html">Imlib2::Dir</a> or <a
+href="Direction.html">Imlib2::Direction</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.direction != Imlib2::Direction::RIGHT
+    puts 'drawing funny text'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000145"></a>
+<a href="Context.src/M000145.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000145.html');return false;">
+<b>set_angle</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the text drawing angle.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.angle = 76.8
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000146"></a>
+<a href="Context.src/M000146.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000146.html');return false;">
+<b>angle=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the text drawing angle.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.angle = 76.8
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000147"></a>
+<a href="Context.src/M000147.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000147.html');return false;">
+<b>get_angle</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the text drawing angle.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.dir == Imlib2::Direction::ANGLE
+    puts 'the current font angle is ' &lt;&lt; ctx.angle
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000148"></a>
+<a href="Context.src/M000148.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000148.html');return false;">
+<b>angle</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the text drawing angle.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.dir == Imlib2::Direction::ANGLE
+    puts 'the current font angle is ' &lt;&lt; ctx.angle
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000149"></a>
+<a href="Context.src/M000149.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000149.html');return false;">
+<b>set_color</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current color (<a href="Color.html">Imlib2::Color</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.color = Imlib2::Color::LIGHTGRAY
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000150"></a>
+<a href="Context.src/M000150.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000150.html');return false;">
+<b>color=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current color (<a href="Color.html">Imlib2::Color</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.color = Imlib2::Color::LIGHTGRAY
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000151"></a>
+<a href="Context.src/M000151.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000151.html');return false;">
+<b>get_color</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current color (<a
+href="Color/RgbaColor.html">Imlib2::Color::RgbaColor</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  color = ctx.color
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000152"></a>
+<a href="Context.src/M000152.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000152.html');return false;">
+<b>color</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current color (<a
+href="Color/RgbaColor.html">Imlib2::Color::RgbaColor</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  color = ctx.color
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000153"></a>
+<a href="Context.src/M000153.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000153.html');return false;">
+<b>set_gradient</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current gradient (<a href="Gradient.html">Imlib2::Gradient</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.gradient = grad
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000154"></a>
+<a href="Context.src/M000154.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000154.html');return false;">
+<b>gradient=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current gradient (<a href="Gradient.html">Imlib2::Gradient</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.gradient = grad
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000155"></a>
+<a href="Context.src/M000155.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000155.html');return false;">
+<b>get_gradient</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current gradient (<a href="Gradient.html">Imlib2::Gradient</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  grad = ctx.gradient
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000156"></a>
+<a href="Context.src/M000156.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000156.html');return false;">
+<b>gradient</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current gradient (<a href="Gradient.html">Imlib2::Gradient</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  grad = ctx.gradient
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000157"></a>
+<a href="Context.src/M000157.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000157.html');return false;">
+<b>set_progress_granularity</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the progress callback granularity.
+</p>
+<p>
+This function is not useful at the moment since you cannot specify progress
+callbacks from within ruby (this is a TODO item).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.progress_granularity = 10
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000158"></a>
+<a href="Context.src/M000158.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000158.html');return false;">
+<b>progress_granularity=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the progress callback granularity.
+</p>
+<p>
+This function is not useful at the moment since you cannot specify progress
+callbacks from within ruby (this is a TODO item).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.progress_granularity = 10
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000159"></a>
+<a href="Context.src/M000159.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000159.html');return false;">
+<b>get_progress_granularity</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the progress callback granularity.
+</p>
+<p>
+This function is not useful at the moment since you cannot specify progress
+callbacks from within Ruby (this is a TODO item).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  granularity = ctx.progress_granularity
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000160"></a>
+<a href="Context.src/M000160.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000160.html');return false;">
+<b>progress_granularity</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the progress callback granularity.
+</p>
+<p>
+This function is not useful at the moment since you cannot specify progress
+callbacks from within Ruby (this is a TODO item).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  granularity = ctx.progress_granularity
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000161"></a>
+<a href="Context.src/M000161.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000161.html');return false;">
+<b>set_image</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current image (<a href="Image.html">Imlib2::Image</a>).
+</p>
+<p>
+Note that this function is not useful at the moment since all image
+instance methods blindly blow away the image and color context. So you
+cannot safely mix image context and image instance methods.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.image = image
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000162"></a>
+<a href="Context.src/M000162.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000162.html');return false;">
+<b>image=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current image (<a href="Image.html">Imlib2::Image</a>).
+</p>
+<p>
+Note that this function is not useful at the moment since all image
+instance methods blindly blow away the image and color context. So you
+cannot safely mix image context and image instance methods.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.image = image
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000163"></a>
+<a href="Context.src/M000163.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000163.html');return false;">
+<b>get_image</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current image (<a href="Image.html">Imlib2::Image</a>).
+</p>
+<p>
+Note that this function is not useful at the moment since all image
+instance methods blindly blow away the image and color context. So you
+cannot safely mix image context and image instance methods.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  im = ctx.image
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000164"></a>
+<a href="Context.src/M000164.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000164.html');return false;">
+<b>image</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current image (<a href="Image.html">Imlib2::Image</a>).
+</p>
+<p>
+Note that this function is not useful at the moment since all image
+instance methods blindly blow away the image and color context. So you
+cannot safely mix image context and image instance methods.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  im = ctx.image
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000165"></a>
+<a href="Context.src/M000165.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000165.html');return false;">
+<b>set_cliprect</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the cliprect.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.cliprect = [10, 10, 100, 100]
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000166"></a>
+<a href="Context.src/M000166.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000166.html');return false;">
+<b>cliprect=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the cliprect.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.cliprect = [10, 10, 100, 100]
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000167"></a>
+<a href="Context.src/M000167.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000167.html');return false;">
+<b>get_cliprect</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the cliprect.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y, w, h = ctx.cliprect
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000168"></a>
+<a href="Context.src/M000168.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000168.html');return false;">
+<b>cliprect</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the cliprect.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y, w, h = ctx.cliprect
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000169"></a>
+<a href="Context.src/M000169.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000169.html');return false;">
+<b>set_ttf_encoding</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current TrueType <a href="Font.html">Font</a> <a
+href="Encoding.html">Encoding</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.encoding = Imlib2::Encoding::ISO_8859_5
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000170"></a>
+<a href="Context.src/M000170.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000170.html');return false;">
+<b>set_encoding</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current TrueType <a href="Font.html">Font</a> <a
+href="Encoding.html">Encoding</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.encoding = Imlib2::Encoding::ISO_8859_5
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000171"></a>
+<a href="Context.src/M000171.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000171.html');return false;">
+<b>encoding=</b>(VALUE self, VALUE val)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Set the current TrueType <a href="Font.html">Font</a> <a
+href="Encoding.html">Encoding</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.encoding = Imlib2::Encoding::ISO_8859_5
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000172"></a>
+<a href="Context.src/M000172.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000172.html');return false;">
+<b>get_encoding</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current TrueType <a href="Font.html">Font</a> <a
+href="Encoding.html">Encoding</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.encoding == Imlib2::Encoding::ISO_8859_1
+    puts 'using ISO-8859-1 encoding'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000173"></a>
+<a href="Context.src/M000173.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000173.html');return false;">
+<b>get_ttf_encoding</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current TrueType <a href="Font.html">Font</a> <a
+href="Encoding.html">Encoding</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.encoding == Imlib2::Encoding::ISO_8859_1
+    puts 'using ISO-8859-1 encoding'
+  end
+</pre>
+</div>
+<table summary="method"  width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr><td class="methodtitle">
+<a name="M000174"></a>
+<a href="Context.src/M000174.html" target="Code" class="methodtitle"
+ onClick="popCode('Context.src/M000174.html');return false;">
+<b>encoding</b>(VALUE self)
+</a>
+</td></tr>
+</table>
+<div class="description">
+<p>
+Get the current TrueType <a href="Font.html">Font</a> <a
+href="Encoding.html">Encoding</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.encoding == Imlib2::Encoding::ISO_8859_1
+    puts 'using ISO-8859-1 encoding'
+  end
+</pre>
+</div>
+
+</body>
